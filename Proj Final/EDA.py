@@ -112,8 +112,11 @@ sg_uf = st.sidebar.multiselect(label="Unidade Federativa",
                                         options=mercado["sg_uf"].unique())
 nm_meso_regiao = st.sidebar.multiselect(label="Meso Região",
                                         options=mercado["nm_meso_regiao"].unique())
-
-
+"""
+Uncomment with care"
+"""
+# for i in range(9999):
+#     st.balloons()
 st.image("og-iesb.png", use_column_width=True)
 st.title("Recomendação clientes B2B")
 st.header("Esta página teve como objetivo explorar os resultados da análise de similaridade de empresas B2B")
