@@ -1,0 +1,38 @@
+# Serve para confirmar as mudanças que vc quer que vão para stage
+git add -p
+
+# -a serve para dar add de stage + commit de arquivos que já passaram por um add antes.
+# ignora os arquivos que não passaram explicitamente por add alguma vez na vida.
+git commit -a -m
+# Refaz o commit, considerando qualquer nova modificação em stage.
+# Também permite alterar a mensagem do commit
+git commit --ammend
+[CUIDADO] não executar isso com commits que já foram dado push, vai dar dor de cabeça
+
+# Remove da área de stage, algum arquivo, preservando seu estado original fora do track do git
+git reset HEAD <file>
+# Itera arquivos em stage, com um prompt para remover ou não de stage
+git reset HEAD -p
+
+# Ver estado dos arquivos em stage ou commit
+git status
+
+# Ver todos os commits anteriores
+git log
+# Mesmo que acima + mostrar nome do arquivo alterado e quantas linah foram adicionadas e/ou removidas
+git log --stat
+
+# Ver determinado commit pelo terminal
+git show <codigo_do_commit>
+
+# Faz um commit com o inverso do ultimo commit (HEAD)
+git revert HEAD
+# Faz o inverso de um commit especifico
+git revert <commit-id>
+
+# Trocar entre branches
+git checkout <branch>
+# Crie e troca para a nova branch
+git checkout -b <nova-branch>
+# Deleta a branch
+git checkout -d <branch>
